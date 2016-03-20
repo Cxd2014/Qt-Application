@@ -1,0 +1,940 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>900</width>
+    <height>595</height>
+   </rect>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>900</width>
+    <height>595</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>900</width>
+    <height>595</height>
+   </size>
+  </property>
+  <property name="cursor">
+   <cursorShape>ArrowCursor</cursorShape>
+  </property>
+  <property name="focusPolicy">
+   <enum>Qt::TabFocus</enum>
+  </property>
+  <property name="windowTitle">
+   <string>MainWindow</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">* {
+font-family:'微软雅黑';
+}
+
+/*设置背景图片*/
+QMainWindow{
+border-image:url(&quot;:/images/background_mainwnd.png&quot;);
+}
+
+
+</string>
+  </property>
+  <property name="iconSize">
+   <size>
+    <width>70</width>
+    <height>70</height>
+   </size>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>0</y>
+      <width>91</width>
+      <height>21</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;span style=&quot; color:#ffffff;&quot;&gt;360 UI 1.0 CXD&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+    </property>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>30</y>
+      <width>651</width>
+      <height>77</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout">
+     <property name="spacing">
+      <number>20</number>
+     </property>
+     <property name="leftMargin">
+      <number>20</number>
+     </property>
+     <property name="rightMargin">
+      <number>20</number>
+     </property>
+     <item>
+      <widget class="QToolButton" name="ChecktoolButton">
+       <property name="minimumSize">
+        <size>
+         <width>63</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>63</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="cursor">
+        <cursorShape>ArrowCursor</cursorShape>
+       </property>
+       <property name="mouseTracking">
+        <bool>false</bool>
+       </property>
+       <property name="focusPolicy">
+        <enum>Qt::TabFocus</enum>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* 设置按钮的属性 */
+QToolButton[objectName=&quot;ChecktoolButton&quot;] {
+border:0px; /*取消按钮边界，使按钮透明*/
+color:white;
+}
+QToolButton[objectName=&quot;ChecktoolButton&quot;]:hover {
+image:url(:/images/cxd.png);/*鼠标放上去是显示的效果*/
+}
+QToolButton[objectName=&quot;ChecktoolButton&quot;]:checked {
+image:url(:/images/cxd.png);/*若选中就显示这张图片*/
+}
+</string>
+       </property>
+       <property name="text">
+        <string>电脑体检</string>
+       </property>
+       <property name="icon">
+        <iconset resource="src.qrc">
+         <normaloff>:/images/ico_Examine.png</normaloff>:/images/ico_Examine.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>true</bool>
+       </property>
+       <property name="autoRepeat">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+       <property name="popupMode">
+        <enum>QToolButton::DelayedPopup</enum>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="KilltoolButton">
+       <property name="minimumSize">
+        <size>
+         <width>63</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>63</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* 设置按钮的属性 */
+QToolButton[objectName=&quot;KilltoolButton&quot;] {
+border:0px; /*取消按钮边界，使按钮透明*/
+color:white;
+}
+QToolButton[objectName=&quot;KilltoolButton&quot;]:hover {
+image:url(:/images/cxd.png);/*鼠标放上去是显示的效果*/
+}
+QToolButton[objectName=&quot;KilltoolButton&quot;]:checked {
+image:url(:/images/cxd.png);/*若选中就显示这张图片*/
+}</string>
+       </property>
+       <property name="text">
+        <string>木马查杀</string>
+       </property>
+       <property name="icon">
+        <iconset resource="src.qrc">
+         <normaloff>:/images/ico_dsmain.png</normaloff>:/images/ico_dsmain.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeat">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+       <property name="autoRaise">
+        <bool>false</bool>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="FixtoolButton">
+       <property name="minimumSize">
+        <size>
+         <width>63</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>63</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* 设置按钮的属性 */
+QToolButton[objectName=&quot;FixtoolButton&quot;] {
+border:0px; /*取消按钮边界，使按钮透明*/
+color:white;
+}
+QToolButton[objectName=&quot;FixtoolButton&quot;]:hover {
+image:url(:/images/cxd.png);/*鼠标放上去是显示的效果*/
+}
+QToolButton[objectName=&quot;FixtoolButton&quot;]:checked {
+image:url(:/images/cxd.png);/*若选中就显示这张图片*/
+}</string>
+       </property>
+       <property name="text">
+        <string>系统修复</string>
+       </property>
+       <property name="icon">
+        <iconset resource="src.qrc">
+         <normaloff>:/images/ico_SysRepair.png</normaloff>:/images/ico_SysRepair.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoRepeat">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="CleantoolButton">
+       <property name="minimumSize">
+        <size>
+         <width>63</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>63</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* 设置按钮的属性 */
+QToolButton[objectName=&quot;CleantoolButton&quot;] {
+border:0px; /*取消按钮边界，使按钮透明*/
+color:white;
+}
+QToolButton[objectName=&quot;CleantoolButton&quot;]:hover {
+image:url(:/images/cxd.png);/*鼠标放上去是显示的效果*/
+}
+QToolButton[objectName=&quot;CleantoolButton&quot;]:checked {
+image:url(:/images/cxd.png);/*若选中就显示这张图片*/
+}</string>
+       </property>
+       <property name="text">
+        <string>电脑清理</string>
+       </property>
+       <property name="icon">
+        <iconset resource="src.qrc">
+         <normaloff>:/images/ico_TraceCleaner.png</normaloff>:/images/ico_TraceCleaner.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="SpeedtoolButton">
+       <property name="minimumSize">
+        <size>
+         <width>63</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>63</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* 设置按钮的属性 */
+QToolButton[objectName=&quot;SpeedtoolButton&quot;] {
+border:0px; /*取消按钮边界，使按钮透明*/
+color:white;
+}
+QToolButton[objectName=&quot;SpeedtoolButton&quot;]:hover {
+image:url(:/images/cxd.png);/*鼠标放上去是显示的效果*/
+}
+QToolButton[objectName=&quot;SpeedtoolButton&quot;]:checked {
+image:url(:/images/cxd.png);
+}</string>
+       </property>
+       <property name="text">
+        <string>优化加速</string>
+       </property>
+       <property name="icon">
+        <iconset resource="src.qrc">
+         <normaloff>:/images/ico_SpeedupOpt.png</normaloff>:/images/ico_SpeedupOpt.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="ComputertoolButton">
+       <property name="minimumSize">
+        <size>
+         <width>63</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>63</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* 设置按钮的属性 */
+QToolButton[objectName=&quot;ComputertoolButton&quot;] {
+color:white;
+border:0px; /*取消按钮边界，使按钮透明*/
+}
+QToolButton[objectName=&quot;ComputertoolButton&quot;]:hover {
+image:url(:/images/cxd.png);/*鼠标放上去是显示的效果*/
+}
+QToolButton[objectName=&quot;ComputertoolButton&quot;]:checked {
+image:url(:/images/cxd.png);
+}</string>
+       </property>
+       <property name="text">
+        <string>电脑专家</string>
+       </property>
+       <property name="icon">
+        <iconset resource="src.qrc">
+         <normaloff>:/images/ico_expert.png</normaloff>:/images/ico_expert.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+       <property name="popupMode">
+        <enum>QToolButton::DelayedPopup</enum>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="SofttoolButton">
+       <property name="minimumSize">
+        <size>
+         <width>63</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="maximumSize">
+        <size>
+         <width>63</width>
+         <height>75</height>
+        </size>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">/* 设置按钮的属性 */
+QToolButton[objectName=&quot;SofttoolButton&quot;] {
+color:white;
+border:0px; /*取消按钮边界，使按钮透明*/
+}
+QToolButton[objectName=&quot;SofttoolButton&quot;]:hover {
+image:url(:/images/cxd.png);/*鼠标放上去是显示的效果*/
+}
+QToolButton[objectName=&quot;SofttoolButton&quot;]:checked {
+image:url(:/images/cxd.png);
+}</string>
+       </property>
+       <property name="text">
+        <string>软件管家</string>
+       </property>
+       <property name="icon">
+        <iconset resource="src.qrc">
+         <normaloff>:/images/ico_softmgr.png</normaloff>:/images/ico_softmgr.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>48</width>
+         <height>48</height>
+        </size>
+       </property>
+       <property name="checkable">
+        <bool>true</bool>
+       </property>
+       <property name="checked">
+        <bool>false</bool>
+       </property>
+       <property name="autoExclusive">
+        <bool>true</bool>
+       </property>
+       <property name="toolButtonStyle">
+        <enum>Qt::ToolButtonTextUnderIcon</enum>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QWidget" name="layoutWidget">
+    <property name="geometry">
+     <rect>
+      <x>790</x>
+      <y>0</y>
+      <width>105</width>
+      <height>27</height>
+     </rect>
+    </property>
+    <layout class="QHBoxLayout" name="horizontalLayout_2">
+     <item>
+      <widget class="MenuButton" name="AboutpushButton">
+       <property name="styleSheet">
+        <string notr="true">/* 设置按钮的属性 */
+QPushButton[objectName=&quot;AboutpushButton&quot;] {
+border:0px; /*取消按钮边界，使按钮透明*/
+}
+
+QPushButton[objectName=&quot;AboutpushButton&quot;]:hover {
+image:url(:/images/menu_hover.png);/*鼠标放上去是显示的效果*/
+}
+
+QPushButton[objectName=&quot;AboutpushButton&quot;]:pressed {
+image:url(:/images/menu_pressed.png);
+}
+</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="src.qrc">
+         <normaloff>:/images/menu_normal.png</normaloff>:/images/menu_normal.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>27</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="MinitoolButton">
+       <property name="styleSheet">
+        <string notr="true">
+QToolButton[objectName=&quot;MinitoolButton&quot;] {
+border:0px; /*取消按钮边界，使按钮透明*/
+}
+QToolButton[objectName=&quot;MinitoolButton&quot;]:hover {
+image:url(:/images/min_hover.png);/*鼠标放上去是显示的效果*/
+}
+QToolButton[objectName=&quot;MinitoolButton&quot;]:pressed {
+image:url(:/images/min_hover.png);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="src.qrc">
+         <normaloff>:/images/min_normal.png</normaloff>:/images/min_normal.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>27</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+     <item>
+      <widget class="QToolButton" name="closeToolButton">
+       <property name="styleSheet">
+        <string notr="true">/* 设置按钮的属性 */
+QToolButton[objectName=&quot;closeToolButton&quot;] {
+border:0px; /*取消按钮边界，使按钮透明*/
+}
+
+QToolButton[objectName=&quot;closeToolButton&quot;]:hover {
+image:url(:/images/close_hover.png);/*鼠标放上去是显示的效果*/
+}
+
+QToolButton[objectName=&quot;closeToolButton&quot;]:pressed {
+image:url(:/images/close_pressed.png);
+}</string>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="icon">
+        <iconset resource="src.qrc">
+         <normaloff>:/images/close_normal.png</normaloff>:/images/close_normal.png</iconset>
+       </property>
+       <property name="iconSize">
+        <size>
+         <width>27</width>
+         <height>22</height>
+        </size>
+       </property>
+      </widget>
+     </item>
+    </layout>
+   </widget>
+   <widget class="QStackedWidget" name="stackedWidget">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>108</y>
+      <width>901</width>
+      <height>491</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">/*stackedWidget*/
+QStackedWidget {
+background-color:white;
+}</string>
+    </property>
+    <property name="currentIndex">
+     <number>0</number>
+    </property>
+    <widget class="QWidget" name="page">
+     <widget class="QLabel" name="label_3">
+      <property name="geometry">
+       <rect>
+        <x>50</x>
+        <y>120</y>
+        <width>161</width>
+        <height>131</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/images/computer.png&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QLabel" name="label_10">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>20</y>
+        <width>221</width>
+        <height>111</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-image: url(:/images/register_bg.png);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;br/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="FiretoolButton">
+      <property name="geometry">
+       <rect>
+        <x>660</x>
+        <y>160</y>
+        <width>121</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* 设置按钮的属性 */
+QToolButton[objectName=&quot;FiretoolButton&quot;] {
+border:5px; /*取消按钮边界，使按钮透明*/
+}
+QToolButton[objectName=&quot;FiretoolButton&quot;] {
+font-family:'微软雅黑';
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>安全防护中心</string>
+      </property>
+      <property name="icon">
+       <iconset resource="src.qrc">
+        <normaloff>:/images/firewall_open_normal.png</normaloff>
+        <activeon>:/images/firewall_open_hover.png</activeon>
+        <selectedoff>:/images/firewall_open_normal.png</selectedoff>
+        <selectedon>:/images/firewall_open_hover.png</selectedon>:/images/firewall_open_normal.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextUnderIcon</enum>
+      </property>
+      <property name="arrowType">
+       <enum>Qt::NoArrow</enum>
+      </property>
+     </widget>
+     <widget class="QToolButton" name="ShoptoolButton">
+      <property name="geometry">
+       <rect>
+        <x>780</x>
+        <y>160</y>
+        <width>121</width>
+        <height>91</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">/* 设置按钮的属性 */
+QToolButton[objectName=&quot;ShoptoolButton&quot;] {
+border:0px; /*取消按钮边界，使按钮透明*/
+}
+QToolButton[objectName=&quot;ShoptoolButton&quot;] {
+font-family:'微软雅黑';
+color:black;
+}</string>
+      </property>
+      <property name="text">
+       <string>网购先赔</string>
+      </property>
+      <property name="icon">
+       <iconset resource="src.qrc">
+        <normaloff>:/images/guard_open_press.png</normaloff>:/images/guard_open_press.png</iconset>
+      </property>
+      <property name="iconSize">
+       <size>
+        <width>50</width>
+        <height>60</height>
+       </size>
+      </property>
+      <property name="checkable">
+       <bool>false</bool>
+      </property>
+      <property name="checked">
+       <bool>false</bool>
+      </property>
+      <property name="autoRepeat">
+       <bool>false</bool>
+      </property>
+      <property name="autoExclusive">
+       <bool>false</bool>
+      </property>
+      <property name="toolButtonStyle">
+       <enum>Qt::ToolButtonTextUnderIcon</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>130</y>
+        <width>251</width>
+        <height>21</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_2">
+      <property name="geometry">
+       <rect>
+        <x>640</x>
+        <y>-10</y>
+        <width>20</width>
+        <height>501</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_3">
+      <property name="geometry">
+       <rect>
+        <x>650</x>
+        <y>240</y>
+        <width>251</width>
+        <height>16</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Horizontal</enum>
+      </property>
+     </widget>
+     <widget class="Line" name="line_4">
+      <property name="geometry">
+       <rect>
+        <x>773</x>
+        <y>140</y>
+        <width>20</width>
+        <height>108</height>
+       </rect>
+      </property>
+      <property name="orientation">
+       <enum>Qt::Vertical</enum>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_2">
+     <widget class="QLabel" name="label_2">
+      <property name="geometry">
+       <rect>
+        <x>450</x>
+        <y>150</y>
+        <width>81</width>
+        <height>121</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;img src=&quot;:/images/panda.gif&quot;/&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_3">
+     <widget class="QLabel" name="label_4">
+      <property name="geometry">
+       <rect>
+        <x>300</x>
+        <y>130</y>
+        <width>241</width>
+        <height>141</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(255, 0, 127);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;系统修复&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_4">
+     <widget class="QLabel" name="label_5">
+      <property name="geometry">
+       <rect>
+        <x>240</x>
+        <y>120</y>
+        <width>281</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(85, 255, 255);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;电脑清理&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_5">
+     <widget class="QLabel" name="label_6">
+      <property name="geometry">
+       <rect>
+        <x>370</x>
+        <y>110</y>
+        <width>241</width>
+        <height>161</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 255, 127);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;优化加速&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_6">
+     <widget class="QLabel" name="label_7">
+      <property name="geometry">
+       <rect>
+        <x>360</x>
+        <y>120</y>
+        <width>271</width>
+        <height>171</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(85, 170, 255);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;电脑专家&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+    <widget class="QWidget" name="page_7">
+     <widget class="QLabel" name="label_8">
+      <property name="geometry">
+       <rect>
+        <x>330</x>
+        <y>130</y>
+        <width>291</width>
+        <height>151</height>
+       </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true">background-color: rgb(0, 255, 0);</string>
+      </property>
+      <property name="text">
+       <string>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p align=&quot;center&quot;&gt;&lt;span style=&quot; font-size:36pt;&quot;&gt;软件管家&lt;/span&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+      </property>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_9">
+    <property name="geometry">
+     <rect>
+      <x>710</x>
+      <y>40</y>
+      <width>149</width>
+      <height>61</height>
+     </rect>
+    </property>
+    <property name="styleSheet">
+     <string notr="true">background-image: url(:/images/logo.png);</string>
+    </property>
+    <property name="text">
+     <string/>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <customwidgets>
+  <customwidget>
+   <class>MenuButton</class>
+   <extends>QPushButton</extends>
+   <header location="global">menubutton.h</header>
+  </customwidget>
+ </customwidgets>
+ <resources>
+  <include location="src.qrc"/>
+ </resources>
+ <connections/>
+</ui>
